@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+         h3,p{
+             font-size: 30px;
+             font-style: oblique;
+
+
+    }
+        body{
+              
+              text-align: center;
+              justify-content: center;
+               background-color:#000b;
+               color: white;
+             
+        }
+    
+    </style>
+    </head>
+    <body>
+    
+        <div id="root"></div>
+        
+        <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+         <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+       
+       <script type="text/babel">
+    
+       function Tempo(){
+       // JSX a aprensentar
+
+       const conteudo = (
+          <div>
+            <h3>Tempo atual</h3>
+                <p>Estamos na seguinte Hora: {new Date().toLocaleTimeString()}</p>
+                </div>
+       )
+     ReactDOM.render(
+         conteudo,
+         document.getElementById('root')
+     )
+
+       }
+       setInterval(Tempo, 1000);
+        
+         const root = document.getElementById('root');
+        ReactDOM.render(<App />,root);  /*JSX html dentro de JavaScript*/
+        </script>
+    
+</body>
+</html>
